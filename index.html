@@ -1,0 +1,300 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chic Charm</title>
+
+<style>
+/* GENERAL STYLE */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #000;
+    color: #d4af37; /* ذهبي فاخر */
+}
+
+/* ---------------- NAVBAR ---------------- */
+.navbar {
+    display: flex;
+    justify-content: center; /* النص في النص */
+    gap: 80px;
+    align-items: center;
+    background: rgba(0,0,0,0.85);
+    padding: 20px 50px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    border-bottom: 1px solid #bfa33d;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 35px;
+    font-weight: bold;
+    color: #d4af37;
+}
+
+.nav-links {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #f5f5f5;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: #d4af37;
+}
+
+/* ---------------- HERO SECTION ---------------- */
+.hero {
+    padding-top: 100px; /* عشان Navbar */
+    height: 100vh;
+    background: url("./display-shiny-elegant-gold-chain.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.30);
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+}
+
+.hero h1 {
+    font-size: 80px;
+    margin: 0;
+    color: #d4af37;
+}
+
+.hero p {
+    font-size: 28px;
+    margin: 10px 0 20px;
+    color: #f5f5f5;
+}
+
+.hero-btn {
+    padding: 15px 40px;
+    background: #d4af37;
+    color: black;
+    text-decoration: none;
+    font-size: 22px;
+    border-radius: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.hero-btn:hover {
+    background: #bfa33d;
+    color: #000;
+}
+
+/* ---------------- ABOUT SECTION ---------------- */
+.about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 90px;
+}
+
+.about-text {
+    width: 50%;
+}
+
+.about-text h2 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: #d4af37;
+}
+
+.about-text p {
+    font-size: 22px;
+    line-height: 1.6;
+    color: #f5f5f5;
+}
+
+.about-img img {
+    width: 450px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* ---------------- PRODUCTS SECTION ---------------- */
+.products {
+    text-align: center;
+    padding: 80px 50px;
+}
+
+.products h2 {
+    font-size: 50px;
+    margin-bottom: 50px;
+    color: #d4af37;
+}
+
+.products-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+/* CARD STYLE */
+.card {
+    background: #111;
+    width: 320px;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid #bfa33d;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px #d4af37;
+}
+
+.card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.card h3 {
+    font-size: 26px;
+    margin: 15px 0;
+    color: #d4af37;
+}
+
+.card p {
+    color: #dedede;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+
+.read-btn {
+    display: inline-block;
+    padding: 10px 25px;
+    background: #d4af37;
+    color: black;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.read-btn:hover {
+    background: #bfa33d;
+    color: #000;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 900px) {
+    .about {
+        flex-direction: column;
+        text-align: center;
+    }
+    .about-text, .about-img {
+        width: 100%;
+    }
+
+    .products-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="logo">Chic Charm</div>
+    <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="./about.html">About Us</a></li>
+        <li><a href="./ourproject.html">Products</a></li>
+        <li><a href="./contant.html">Contact</a></li>
+        <li><a href="./addtocart.html">My Cart</a></li>
+
+    </ul>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+        <h1>Chic Charm</h1>
+        <p>Where Elegance Meets Personality</p>
+        <a href="./ourproject.html" class="hero-btn">Discover Your Style</a>
+    </div>
+</section>
+
+<!-- ABOUT SECTION -->
+<section id="about" class="about">
+    <div class="about-text">
+        <h2>About Us</h2>
+        <p>
+            At Chic Charm, we craft elegant fashion pieces  
+            that highlight confidence, beauty, and personality.  
+            Every piece is designed to connect with your unique style  
+            and elevate your everyday look.
+        </p>
+      <a href="./ourproject.html" class="hero-btn">Discover Your Style</a>
+
+    </div>
+
+    <div class="about-img">
+        <img src="./woman-s-arm-wearing-jewelry.jpg" alt="About Image">
+    </div>
+</section>
+
+<!-- PRODUCTS SECTION -->
+<section id="products" class="products">
+    <h2>Our Products</h2>
+    <div class="products-container">
+
+        <div class="card">
+            <img src="./expensive-golden-ring-displayed-rocks.jpg">
+            <h3>Golden Ring</h3>
+            <p>Elegant gold ring perfect for special occasions.</p>
+            <a href="./ourproject.html" class="read-btn">Read More</a>
+        </div>
+
+        <div class="card">
+            <img src="./close-up-hand-holding-sunglasses.jpg">
+            <h3>Classic Sunglasses</h3>
+            <p>Stylish frames that elevate any outfit.</p>
+            <a href="./ourproject.html" class="read-btn">Read More</a>
+        </div>
+
+        <div class="card">
+            <img src="./small-purse-studio-still-life (1).jpg">
+            <h3>Leather Bag</h3>
+            <p>Premium handcrafted bag with timeless design.</p>
+            <a href="./ourproject.html" class="read-btn">Read More</a>
+        </div>
+
+    </div>
+</section>
+
+</body>
+</html>

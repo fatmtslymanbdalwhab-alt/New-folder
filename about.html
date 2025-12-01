@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chic Charm - About Us</title>
+<style>
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #000;
+    color: #bfa33d;
+}
+
+/* ---------------- NAVBAR ---------------- */
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    align-items: center;
+    background: rgba(0,0,0,0.85);
+    padding: 20px 50px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    border-bottom: 1px solid #bfa33d;
+    z-index: 1000;
+}
+.logo {
+    font-size: 35px;
+    font-weight: bold;
+    color: #bfa33d;
+}
+.nav-links {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+.nav-links a {
+    text-decoration: none;
+    color: #f5f5f5;
+    font-size: 20px;
+    font-weight: 500;
+}
+.nav-links a:hover { color: #bfa33d; }
+
+/* ---------------- HERO ---------------- */
+.hero {
+    height: 50vh;
+    background: url('https://images.unsplash.com/photo-1600180758895-6e8b5e0c73d7?auto=format&fit=crop&w=1470&q=80');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+}
+
+.hero h1 {
+    position: relative;
+    color: #bfa33d;
+    font-size: 60px;
+    text-align: center;
+    z-index: 1;
+}
+
+/* ---------------- ABOUT SECTION ---------------- */
+.about-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 50px;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: #bfa33d;
+}
+
+.about-text p {
+    font-size: 20px;
+    line-height: 1.6;
+    color: #f5f5f5;
+}
+
+.about-img {
+    flex: 1;
+}
+
+.about-img img {
+    width: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+/* ---------------- VALUES SECTION ---------------- */
+.values-section {
+    background: #111;
+    padding: 80px 50px;
+    text-align: center;
+}
+
+.values-section h2 {
+    font-size: 50px;
+    margin-bottom: 50px;
+    color: #bfa33d;
+}
+
+.values-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+/* CARD */
+.value-card {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.value-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.value-card:hover img {
+    transform: scale(1.1);
+}
+
+.value-card .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+    color: #bfa33d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+    padding: 20px;
+    text-align: center;
+}
+
+.value-card:hover .overlay {
+    opacity: 1;
+}
+
+.value-card .overlay h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.value-card .overlay p {
+    font-size: 16px;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 900px) {
+    .about-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    .about-img, .about-text { width: 100%; }
+    .values-container { flex-direction: column; align-items: center; }
+}
+
+</style>
+
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="logo">Chic Charm</div>
+    <ul class="nav-links">
+        <li><a href="pdoject3.html">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="ourproject.html">Products</a></li>
+        <li><a href="contant.html">Contact</a></li>
+        <li><a href="./addtocart.html">My Cart</a></li>
+
+    </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <h1>About Us</h1>
+</section>
+
+<!-- ABOUT SECTION -->
+<section class="about-section">
+    <div class="about-text">
+        <h2>Our Story</h2>
+        <p>
+            Chic Charm was founded with a passion for elegance and individuality.  
+            Our mission is to create pieces that empower and reflect the personality  
+            of everyone who wears them. Every design is meticulously crafted, blending  
+            timeless style with modern trends to inspire confidence and charm.
+        </p>
+    </div>
+    <div class="about-img">
+        <img src="./woman-wearing-warm-cap-her-head.jpg" alt="About Image">
+    </div>
+</section>
+
+<!-- VALUES SECTION -->
+<section class="values-section">
+    <h2>Our Values</h2>
+    <div class="values-container">
+        <div class="value-card">
+            <img src="./close-up-hand-holding-sunglasses.jpg" alt="Quality">
+            <div class="overlay">
+                <h3>Quality</h3>
+                <p>Premium materials and craftsmanship in every piece.</p>
+            </div>
+        </div>
+        <div class="value-card">
+            <img src="./expensive-golden-ring-displayed-rocks.jpg" alt="Passion">
+            <div class="overlay">
+                <h3>Passion</h3>
+                <p>Designs created with love and dedication for our customers.</p>
+            </div>
+        </div>
+         <div class="value-card">
+            <img src="./ripple-ornament-forever-drop-costume.jpg" alt="Passion">
+            <div class="overlay">
+                <h3>Innovation</h3>
+                <p>Constantly exploring new designs and techniques to bring unique elegance that stands out in the world of fashion jewelry.</p>
+            </div>
+        </div>
+        <div class="value-card">
+            <img src="./small-purse-studio-still-life.jpg" alt="Sustainability">
+            <div class="overlay">
+                <h3>Sustainability</h3>
+                <p>Eco-friendly practices in sourcing and production.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>

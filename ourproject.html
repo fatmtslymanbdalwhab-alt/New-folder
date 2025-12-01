@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chic Charm - Products</title>
+<style>
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #000;
+    color: #bfa33d;
+}
+
+/* ---------------- NAVBAR ---------------- */
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    align-items: center;
+    background: rgba(0,0,0,0.85);
+    padding: 20px 50px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    border-bottom: 1px solid #bfa33d;
+    z-index: 1000;
+}
+.logo {
+    font-size: 35px;
+    font-weight: bold;
+    color: #bfa33d;
+}
+.nav-links {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+.nav-links a {
+    text-decoration: none;
+    color: #f5f5f5;
+    font-size: 20px;
+    font-weight: 500;
+}
+.nav-links a:hover { color: #bfa33d; }
+
+/* ---------------- HERO ---------------- */
+.hero {
+    height: 60vh;
+    background: url('./top-view-accessoires-travel-with-women-clothing-concept-white.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+/* Overlay أخف من قبل */
+.hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.2); /* بدل 0.6 خليتها 0.3 */
+}
+
+
+.hero h1 {
+    position: relative;
+    color: #bfa33d;
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    position: relative;
+    color: #2c0202;
+    font-size: 20px;
+    max-width: 700px;
+}
+
+/* ---------------- SECTION STYLE ---------------- */
+.section {
+    padding: 80px 50px;
+}
+
+.section h2 {
+    color: #bfa33d;
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section p {
+    color: #f5f5f5;
+    font-size: 18px;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+}
+
+/* ---------------- CARDS ---------------- */
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    position: relative;
+    width: 250px;
+    border-radius: 15px;
+    overflow: hidden;
+    background: #111;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-content h3 {
+    color: #bfa33d;
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+.card-content p {
+    color: #f5f5f5;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.card-content button {
+    background: #bfa33d;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.card-content button:hover {
+    background: #f0d96b;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media(max-width: 1000px) {
+    .cards { flex-direction: column; align-items: center; }
+}
+</style>
+</head>
+
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="logo">Chic Charm</div>
+    <ul class="nav-links">
+        <li><a href="pdoject3.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contant.html">Contact</a></li>
+        <li><a href="./addtocart.html">My Cart</a></li>
+
+    </ul>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="hero">
+    <h1>Our Products</h1>
+    <p>Discover our curated collections of jewelry, watches, scarves, and bags that reflect elegance, charm, and timeless style.</p>
+</section>
+
+<!-- JEWELRY SECTION -->
+<section class="section" id="jewelry">
+    <h2>Jewelry</h2>
+    <p>Explore our exquisite jewelry collection, crafted to enhance your style and personality.</p>
+    <div class="cards">
+        <div class="card">
+            <img src="./silver-jewelry-box-with-jewels.jpg" alt="Ring">
+            <div class="card-content">
+                <h3>Golden Ring</h3>
+                <p>Elegant ring to add sparkle to your outfit.</p>
+                <p class="price">$80</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="./valentines-day-still-life-design.jpg" alt="Necklace">
+            <div class="card-content">
+                <h3>Diamond Necklace</h3>
+                <p>Luxurious necklace for a stunning look.</p>
+                 <p class="price">$90</p>
+               <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="queen-crown-still-life.jpg" alt="Earrings">
+            <div class="card-content">
+                <h3>Pearl Earrings</h3>
+                <p>Timeless elegance for any occasion.</p>
+                <p class="price">$90</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="./luxurious-shiny-golden-chain.jpg" alt="Bracelet">
+            <div class="card-content">
+                <h3>Gold Bracelet</h3>
+                <p>Charming bracelet for daily wear or special events.</p>
+                <p class="price">$80</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- WATCHES SECTION -->
+<section class="section" id="watches">
+    <h2>Watches</h2>
+    <p>Elegant timepieces to complement your style and sophistication.</p>
+    <div class="cards">
+        <div class="card">
+            <img src="./closeup-shot-hand-watch-with-bstrap-reflective-surface.jpg" alt="Luxury Watch">
+            <div class="card-content">
+                <h3>Luxury Watch</h3>
+                <p>Precision and elegance combined.</p>
+                <p class="price">$120</p>
+                  <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="./closeup-shot-modern-cool-black-digital-watch-with-brown-leather-strap.jpg" alt="Sport Watch">
+            <div class="card-content">
+                <h3>Sport Watch</h3>
+                <p>Functional design with style.</p>
+                <p class="price">$130</p>
+               <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="./happy-father-s-day-composition-father-s-day-top-view.jpg" alt="Classic Watch">
+            <div class="card-content">
+                <h3>Classic Watch</h3>
+                <p>Timeless design for any occasion.</p>
+                <p class="price">$500</p>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="./OIP (1).jpg" alt="Gold Watch">
+            <div class="card-content">
+                <h3>Gold Watch</h3>
+                <p>Elegant statement piece for your wrist.</p>
+                <p class="price">$80</p>
+            <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SCARVES SECTION -->
+<section class="section" id="scarves">
+    <h2>Scarves</h2>
+    <p>Soft, stylish scarves to elevate any outfit.</p>
+    <div class="cards">
+        <div class="card">
+            <img src="./scarf-hat-near-hot-chocolate.jpg" alt="Silk Scarf">
+            <div class="card-content">
+                <h3>Silk Scarf</h3>
+                <p>Soft and luxurious for any occasion.</p>
+                <p class="price">$200</p>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="beautiful-woman-with-pleasant-smile-wearing-warm-winter-clothes-standing-sideways-raising-her-hand-looking-aside.jpg" alt="Wool Scarf">
+            <div class="card-content">
+                <h3>Wool Scarf</h3>
+                <p>Warm and stylish for winter days.</p>
+                <p class="price">$100</p>
+             <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="Screenshot 2025-11-30 111805.png" alt="Pattern Scarf">
+            <div class="card-content">
+                <h3>Pattern Scarf</h3>
+                <p>Elegant prints to match your outfit.</p>
+                <p class="price">$60</p>
+            <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="beautiful-woman-wearing-hijab.jpg" alt="Chiffon Scarf">
+            <div class="card-content">
+                <h3>Chiffon Scarf</h3>
+                <p>Light and breezy for casual elegance.</p>
+                <p class="price">$80</p>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- BAGS SECTION -->
+<section class="section" id="bags">
+    <h2>Bags</h2>
+    <p>Discover our selection of bags, blending style with functionality.</p>
+    <div class="cards">
+        <div class="card">
+            <img src="beautiful-elegance-luxury-fashion-green-handbag.jpg" alt="Handbag">
+            <div class="card-content">
+                <h3>Elegant Handbag</h3>
+                <p>Classic and chic, perfect for any occasion.</p>
+                <p class="price">$120</p>
+               <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="./pink-handbags.jpg" alt="Crossbody">
+            <div class="card-content">
+                <h3>Crossbody Bag</h3>
+                <p>Functional and stylish for daily use.</p>
+                <p class="price">$90</p>
+             <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="./small-purse-studio-still-life (1).jpg" alt="Clutch">
+            <div class="card-content">
+                <h3>Clutch Bag</h3>
+                <p>Small and elegant for special events.</p>
+                <p class="price">$100</p>
+               <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="./Untitled.jpg" alt="Tote Bag">
+            <div class="card-content">
+                <h3>Tote Bag</h3>
+                <p>Spacious and stylish for everyday needs.</p>
+                <p class="price">$80</p>
+                 <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+</section>
+</section>
+
+<script>
+// زرار Add to Cart ديناميكي
+const buttons = document.querySelectorAll('.add-to-cart');
+
+buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+        const card = btn.closest('.card');
+        const name = card.querySelector('h3').innerText;
+        const price = card.querySelector('.price').innerText;
+        const img = card.querySelector('img').src;
+
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        cart.push({name, price, img});
+        localStorage.setItem('cart', JSON.stringify(cart));
+
+        // تحويل مباشر لصفحة Add to Cart
+        window.location.href = "addtocart.html";
+    });
+});
+</script>
+
+</body>
+</html>
